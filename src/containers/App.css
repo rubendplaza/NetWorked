@@ -1,0 +1,36 @@
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serifs;
+    font-style: normal;
+    font-weight: 600;
+    color: #66FCF1;
+}
+
+.loadingContainer {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loadingTag {
+    animation: loading 5s infinite;
+    animation-delay: 0s;
+    font-size: 2rem;
+}
+
+@keyframes loading {
+    0% {
+        /* font-size: 2rem; */
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        /* font-size: 2rem; */
+        transform: scale(1.1);
+    }
+}

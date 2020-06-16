@@ -1,0 +1,8 @@
+.cardListContainer {
+    overflow-y: scroll;
+    border-top: 2px solid #1F2833;
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    width: 100%;
+}

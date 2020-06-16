@@ -1,0 +1,25 @@
+input {
+    color: #FFFFFF;
+    /* border-color: #66FCF1; */
+    border-color: #45A29E;
+    background-color: #1F2833;
+}
+
+input:hover {
+    background-color: #1F2833;
+}
+
+input::placeholder {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
