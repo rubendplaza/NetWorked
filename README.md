@@ -6,5 +6,5 @@
 
 Well look no further than NetWorked! The best application to keep your network and relationships strong.
 
-Check it out today! [NetWorked](https://www.google.com/)<br />
+Check it out today! [NetWorked](https://rubendplaza.github.io/NetWorked/)<br />
 ![alt text](./public/networked.png)
