@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
@@ -6,31 +7,39 @@ import Header from '../components/Header';
 import ErrorBoundary from '../components/ErrorBoundary';
 import './App.css';
 
-class App extends React.Component {
-    constructor() {
-        super();
-        this.state = { 
-            connections: [],
-            searchField: ''
-        }
+import { setSearchField, requestConnections } from '../actions';
+
+//tell me what piece of state I need to listen to and send down as props
+const mapStateToProps = state => {
+    return {
+        searchField: state.searchConnections.searchField,
+        connections: state.requestConnections.connections,
+        isPending: state.requestConnections.isPending,
+        error: state.requestConnections.error
     }
+}
+
+//dispatch triggers the action
+//what props should I listen to that are actions that need to get dispatched
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+        onRequestConnections: () => dispatch(requestConnections())
+    }
+}
+
+class App extends React.Component {
 
     componentDidMount() {
-        fetch('https://next.json-generator.com/api/json/get/N1hbZK16u')
-            .then(response => response.json())
-            .then(users => this.setState({ connections: users }));
-    }
-
-    onSearchChange = (event) => {
-        this.setState({ searchField: event.target.value });
+        this.props.onRequestConnections();
     }
 
     render() {
-        const { connections, searchField } = this.state;
+        const { searchField, onSearchChange, connections, isPending } = this.props;
         const filteredConnections = connections.filter(connection => {
             return (connection.name.first.toLowerCase().includes(searchField.toLowerCase()) || connection.name.last.toLowerCase().includes(searchField.toLowerCase()))
         });
-        return !connections.length ? 
+        return isPending ? 
             (
                 <div className='loadingContainer'>
                     <h1 className='loadingTag'>Loading...</h1>
@@ -40,7 +49,7 @@ class App extends React.Component {
             (
                 <div className='tc'>
                     <Header />
-                    <SearchBox searchChange={this.onSearchChange}/>
+                    <SearchBox searchChange={onSearchChange}/>
                     <Scroll>
                         <ErrorBoundary>
                             <CardList connections={filteredConnections}/>
@@ -51,4 +60,5 @@ class App extends React.Component {
     }
 }
 
-export default App;
+//connect is a higher order function that returns another function that will be passed App
+export default connect(mapStateToProps, mapDispatchToProps)(App);
