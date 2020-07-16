@@ -12,6 +12,7 @@ import { setSearchField, requestConnections } from '../actions';
 //tell me what piece of state I need to listen to and send down as props
 const mapStateToProps = state => {
     return {
+        //these fields come from the reducers
         searchField: state.searchConnections.searchField,
         connections: state.requestConnections.connections,
         isPending: state.requestConnections.isPending,
