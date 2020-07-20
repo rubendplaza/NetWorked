@@ -1,43 +1,43 @@
-
 .navBar {
-    background-color: #1F2833;
-    width: 100%;
+  background-color: #1f2833;
+  width: 100%;
 }
 
 .main-nav {
-    display: flex;
-    list-style: none;
-    font-size: 1.5em;
-    margin: 0;
-    align-items: center;
+  display: flex;
+  list-style: none;
+  font-size: 1.5em;
+  margin: 0;
+  align-items: center;
 }
 
-@media only screen and (max-width: 600px){
-    .main-nav{
-        font-size: 1em;
-        padding: 0;
-    }
+@media only screen and (max-width: 600px) {
+  .main-nav {
+    font-size: 1em;
+    padding: 0;
+  }
 }
 
 .linkItem {
-    padding: 20px;
+  padding: 20px;
 }
 
 .link {
-    text-decoration: none;
-    color: #FFFFFF;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .link:hover {
-    color: #66FCF1;
+  color: #66fcf1;
 }
 
 .push {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .appName {
-    font-size: 1.5em;
-    color: #66FCF1;
-    font-weight: 700;
+  font-size: 2em;
+  color: #66fcf1;
+  font-weight: 700;
 }
