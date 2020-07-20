@@ -6,6 +6,7 @@ class Header extends React.Component {
     return false;
   }
   render() {
+    console.log("Header");
     return (
       <nav className="navBar sticky">
         <ul className="main-nav">
