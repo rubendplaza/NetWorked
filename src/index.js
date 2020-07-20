@@ -6,7 +6,6 @@ import { createLogger } from "redux-logger";
 import thunkMiddleware from "redux-thunk";
 import "./index.css";
 import App from "./containers/App";
-// import Background from "./components/Background";
 import * as serviceWorker from "./serviceWorker";
 import "tachyons";
 
@@ -21,7 +20,6 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Background /> */}
     <Provider store={store}>
       <App />
     </Provider>
