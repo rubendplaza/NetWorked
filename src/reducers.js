@@ -19,7 +19,7 @@ export const searchConnections = (state = initialStateSearch, action = {}) => {
 };
 
 const initialStateConnections = {
-  isPending: true,
+  isPending: false,
   connections: [],
   error: "",
 };
