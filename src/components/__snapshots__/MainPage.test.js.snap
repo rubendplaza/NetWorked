@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests for MainPage component renders MainPage loading screen without crashing 1`] = `
+<div
+  className="loadingContainer"
+>
+  <h1
+    className="loadingTag"
+  >
+    Loading...
+  </h1>
+</div>
+`;
+
+exports[`tests for MainPage component renders MainPage without crashing 1`] = `
+<div
+  className="tc"
+>
+  <Header />
+  <SearchBox />
+  <Scroll>
+    <CardList
+      connections={Array []}
+    />
+  </Scroll>
+</div>
+`;

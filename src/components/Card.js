@@ -1,8 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = (props) => {
-  const { name, email, phone, company } = props;
+const Card = ({ name, email, phone, company }) => {
   return (
     <div className="tc dib pa3 ma3 grow shadow-2 card ba bw2">
       <img

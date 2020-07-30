@@ -1,0 +1,32 @@
+h1 {
+  color: #66fcf1;
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loadingTag {
+  animation: loading 5s infinite;
+  animation-delay: 0s;
+  font-size: 2rem;
+}
+
+@keyframes loading {
+  0% {
+    /* font-size: 2rem; */
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    /* font-size: 2rem; */
+    transform: scale(1.1);
+  }
+}

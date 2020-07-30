@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Header component Header component renders correctly without crashing 1`] = `
+<nav
+  className="navBar sticky"
+>
+  <ul
+    className="main-nav"
+  >
+    <li
+      className="linkItem"
+    >
+      <a
+        className="link appName"
+        href="https://www.google.com/"
+      >
+        NetWorked
+      </a>
+    </li>
+    <li
+      className="linkItem push"
+    >
+      <a
+        className="link"
+        href="https://www.google.com/"
+      >
+        About
+      </a>
+    </li>
+    <li
+      className="linkItem"
+    >
+      <a
+        className="link"
+        href="https://www.google.com/"
+      >
+        Contact
+      </a>
+    </li>
+    <li
+      className="linkItem"
+    >
+      <a
+        className="link"
+        href="https://www.google.com/"
+      >
+        Team
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

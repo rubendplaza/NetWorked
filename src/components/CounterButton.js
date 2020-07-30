@@ -23,7 +23,11 @@ class CounterButton extends React.Component {
 
   render() {
     return (
-      <button color={this.props.color} onClick={this.updateCount}>
+      <button
+        className="ctr-button"
+        color={this.props.color}
+        onClick={this.updateCount}
+      >
         Count: {this.state.count}
       </button>
     );

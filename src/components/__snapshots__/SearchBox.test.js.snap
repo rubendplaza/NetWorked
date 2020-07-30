@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox component renders correctly without crashing 1`] = `
+<div
+  className="ma4 search"
+>
+  <input
+    aria-label="Search Network Connections"
+    className="bw2 pa3 ba"
+    id="search"
+    placeholder="Search Network"
+    type="search"
+  />
+</div>
+`;

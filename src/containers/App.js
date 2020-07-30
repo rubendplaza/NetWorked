@@ -1,9 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import CardList from "../components/CardList";
-import SearchBox from "../components/SearchBox";
-import Scroll from "../components/Scroll";
-import Header from "../components/Header";
+import MainPage from "../components/MainPage";
 import "./App.css";
 
 import { setSearchField, requestConnections } from "../actions";
@@ -29,33 +26,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 class App extends React.Component {
-  componentDidMount() {
-    this.props.onRequestConnections();
-  }
-
   render() {
-    const { searchField, onSearchChange, connections, isPending } = this.props;
-    const filteredConnections = connections.filter((connection) => {
-      return (
-        connection.name.first
-          .toLowerCase()
-          .includes(searchField.toLowerCase()) ||
-        connection.name.last.toLowerCase().includes(searchField.toLowerCase())
-      );
-    });
-    return isPending ? (
-      <div className="loadingContainer">
-        <h1 className="loadingTag">Loading...</h1>
-      </div>
-    ) : (
-      <div className="tc">
-        <Header />
-        <SearchBox searchChange={onSearchChange} />
-        <Scroll>
-          <CardList connections={filteredConnections} />
-        </Scroll>
-      </div>
-    );
+    return <MainPage {...this.props}/>;
   }
 }
 

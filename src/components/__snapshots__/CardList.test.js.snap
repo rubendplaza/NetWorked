@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render card component 1`] = `
+<div
+  className="tc grid-item"
+>
+  <Card
+    company="Google"
+    email="ruben@gmail.com"
+    key="1"
+    name="Ruben Plaza"
+    phone={1234567890}
+  />
+  <Card
+    company="Facebook"
+    email="rube@gmail.com"
+    key="2"
+    name="Rube Plaz"
+    phone={1234567899}
+  />
+</div>
+`;
